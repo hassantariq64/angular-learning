@@ -1,0 +1,48 @@
+<form >
+    <div class="container">
+        <div class="row mt-5">
+            <div class="spContainer mx-auto">
+                <div class="card px-4 py-5 border- shadow">
+                    <h4 class="d-inline text-center mb-3" >Student Form</h4>
+                    <div class="mb-3 ">
+                        <label  class="form-label">Enter your first name</label>
+                        <input type="text" name="firstName" class="form-control" [(ngModel)]="student.firstName"  >
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Enter your last name</label>
+                        <input type="text" name="lastName" class="form-control" [(ngModel)]="student.lastName"  >
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Enter your cnic</label>
+                        <input type="text" name="cnic" class="form-control" [(ngModel)]="student.cnic" >
+                        
+                    </div>
+                    <div class="mb-1">
+                        <div class="input-group">
+                            <label class="input-group-text" for="selectOptions">Select Subjects</label>
+                            <select multiple class="form-select" id="selectOptions" name="selectedSubjects" [(ngModel)]="student.selectedSubjects">
+                                <option value="Programming Fundamentals">Programming Fundamentals</option>
+                                <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                <option value="Data Structures and algorithms">Data Structures and algorithms</option>
+                                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                <option value="Data Science">Data Science</option>
+                                <option value="Machine Learning">Machine Learning</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" (click)="onSubmit()" class="btn btn-primary" style="margin-top: 2%;">Submit</button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </div>
+  </form>
+
+  
